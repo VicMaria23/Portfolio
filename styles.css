@@ -1,0 +1,167 @@
+* {
+    /*tira tudo que o navegador coloca como espaço, limpa coisas que tem por padrão no navegador*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-image: url(./img/fundo.jpg);    
+}
+
+body * {
+    font-family: 'Roboto Mono', sans-serif ;
+    line-height: 160%;
+}
+
+/*main * {
+    border: 1px solid rgb(224, 35, 149);
+
+    forma bordas ao redor
+}*/
+
+header {
+    margin-top: 32px;
+    /*tanto o margin como o padding trabalham com espaços*/
+    text-align: center;
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    /*Determina a largura da imagem*/
+    background-image: linear-gradient(90deg, rgb(245, 29, 130) 0%, blue 100%);
+
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+    /*preenchimento de 4px*/
+
+    transition: trasform .3s;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+header div img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    display: grid;
+    /*"grid" é uma propriedade que */
+    gap: 24px;
+    margin-top: 32px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, rgb(245, 29, 130) 0%, blue 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div {
+    background-color: #2a2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-weight: 900;
+    /*indica o peso da fonte*/
+    font-size: 24px;
+    /*indica o tamanho da fonte*/
+    letter-spacing:  -0.47px;
+    /*indica o espaço entre as letras*/
+}
+
+section p {
+    letter-spacing: -0.18;
+    color: #a1a1aa;
+}
+
+section ul {
+    display: flex;
+    /*alinha as imagens*/
+    flex-wrap: wrap;
+    gap: 16px;
+    /*indica o espaço entre as imagens*/
+
+    margin-top: 24px;
+}
+
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+.games-list  img {
+    width: 90px;
+    border-radius: 8px;
+    /*arredonda as bordas da imagem que está na classe "games-list"*/
+}
+
+/*animation*/
+
+head div {
+    animation: fromTop .7s .2s backwards;
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+@keyframes fromTop {
+    /*serve para dar início a huma animação*/
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes fromBottom {
+
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
