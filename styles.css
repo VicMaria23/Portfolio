@@ -10,7 +10,7 @@ ul {
 }
 
 body {
-    background-image: url(./img/fundo.jpg);    
+    background-image: linear-gradient(rgb(240, 42, 151) 0%, blue 100%);    
 }
 
 body * {
